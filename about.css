@@ -1,0 +1,37 @@
+.about{
+    padding: 0px;
+    margin: 5pxpx auto ;
+    border-bottom: 4px solid #ff5733;
+}
+
+
+main {
+    padding: 5px 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 500px; /* Set a max height */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: contain; /* Keep the entire image visible */
+}

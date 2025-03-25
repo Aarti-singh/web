@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "bc power",
+			"path": "."
+		},
+		{
+			"name": "img",
+			"path": "../web/img"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "img"
+	}
+}

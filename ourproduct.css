@@ -1,0 +1,163 @@
+/* Reset Default Margins & Paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure Body & HTML Take Full Width */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Section Headings */
+.products h2 {
+    font-size: 2.5rem;
+    color: #0d1034;
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+.product-description {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Full-Width Sections */
+.machinery, 
+.safety-tools {
+    width: 100%;
+    padding: 50px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack heading & product grid */
+    align-items: center; /* Center everything */
+}
+
+/* Background Colors */
+.machinery {
+    background-color: #f9f9f9;
+}
+
+.safety-tools {
+    background-color: #eef7ff;
+}
+
+.safety-description {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; /* Make it span full width */
+}
+/* Center Content Inside Sections */
+.machinery .product-container, 
+.safety-tools .product-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center; /* Ensures the heading stays centered */
+}
+
+/* ✅ FIX: Properly Centered Section Headings */
+.machinery h3, 
+.safety-tools h3 {
+    font-size: 2rem;
+    text-align: center;
+    color: #0d1034;
+    margin-bottom: 30px; /* Add spacing between heading and products */
+    width: 100%; /* Ensure it spans full width */
+}
+
+/* Product Grid */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensures proper centering */
+    gap: 20px;
+    width: 100%;
+}
+
+/* 4 Columns for Safety Tools */
+.safety-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Product Cards */
+.product-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Product Card Image */
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Product Card Heading */
+.product-card h4 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #0d1034;
+}
+
+/* Product Card Paragraph */
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Buy Button */
+.product-card .buy-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ef5834;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card .buy-button:hover {
+    background: #c94e2c;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .safety-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-card {
+        max-width: 80%;
+    }
+}
+

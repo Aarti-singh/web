@@ -1,0 +1,564 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+/* Container to keep navbar width fixed */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+}
+
+/* Simple Navbar */
+.navbar {
+    position: fixed; /* Sticks the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #262626;
+    padding: 15px 0;
+    z-index: 1000; /* Ensures it's above everything */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background: #ef5834;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu for Mobile */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.brand-name {
+    color: #fba21d;
+    font-weight: 1000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar {
+        position: fixed;
+        /* Sticks to the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #262626;
+        padding: px 0;
+        z-index: 1000;
+        /* Ensures it stays above other elements */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Optional: Adds a slight shadow */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px; /* Prevents overlapping with navbar */
+        left: 0;
+        width: 100%;
+        background: #262626;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* //////////////////// */
+
+/* Hero Section */
+/* Hero Section - Full Width */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Adjust height as needed */
+    background: url('image/adiyogi.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0%;
+}
+
+/* Adjust Background Image */
+.hero {
+    background-size: cover;
+    /* Options: cover, contain */
+    background-position: center;
+    /* Adjust to left, right, top, bottom, etc. */
+    background-attachment: fixed;
+    /* Parallax effect, use 'scroll' to disable */
+}
+
+/* Gradient Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #fba21d, #ef5834);
+    opacity: 0.6;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 500px;
+    margin: 20%;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ef5834;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #c94e2c;
+}
+
+
+/* second section about us */
+
+/* About Us Section */
+.about {
+    width: 90%;
+    max-width: 1400px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* About Content */
+.about-content {
+    flex: 1;
+    color: #0d1034;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fba21d;
+    /* About Us heading color */
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0d1034;
+    /* Heading for productivity */
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* CTA Button */
+.about-content .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ef5834;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.about-content .cta-button:hover {
+    background: #c94e2c;
+}
+
+
+/* About Image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* Ensures the rounded corners apply properly */
+    border-radius: 15px;
+    /* More noticeable rounding */
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    /* Apply the same radius to the image */
+    object-fit: cover;
+    /* Ensures the image fills the container neatly */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Our Products Section */
+.products {
+    width: 90%;
+    max-width: 1400px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5rem;
+    color: #fba21d;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 32%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: #0d1034;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-card .buy-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ef5834;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.product-card .buy-button:hover {
+    background: #c94e2c;
+}
+
+.product-intro {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        max-width: 80%;
+    }
+}
+
+/* Gradient Background */
+.video-section {
+    position: relative;
+    background: linear-gradient(to right, #fba21d, #ef5834);
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-section h2 {
+    position: absolute;
+    /* Positions it at the top of the section */
+    top: 10px;
+    /* Adjust the spacing from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Ensures it stays centered */
+    font-size: 2rem;
+    color: #0d1034;
+    font-weight: bold;
+    /* background: rgba(255, 255, 255, 0.8); Optional: Adds slight background for visibility */
+    padding: 10px 20px;
+    /* Adds spacing inside the heading */
+    border-radius: 5px;
+    /* Optional: Rounds the corners */
+    z-index: 10;
+    /* Ensures it's above the videos */
+
+    margin-top: 2px;
+
+}
+
+/* Video Slider Wrapper */
+.video-slider {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video Styling */
+video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* Navigation Buttons */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Contact Us Section */
+.contact {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 5px;
+    /* background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Prevents overlapping */
+    /* clear: both; */ 
+    /* Ensures it stays below other sections */
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: #fba21d;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    /* Align labels and inputs correctly */
+}
+
+/* Label Styling */
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input and Textarea Styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Remove outline when clicking on inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #fba21d;
+    outline: none;
+}
+
+/* Ensure the form does not float */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Prevents overlapping */
+    clear: both;
+    /* Ensures it stays below other sections */
+}
+
+/* Fix the button alignment */
+.send-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ef5834;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    /* Ensure proper alignment */
+    margin-top: 15px;
+    /* Add spacing */
+    position: relative;
+    /* Ensures it stays inside the contact section */
+}
+
+/* Fix floating issues by ensuring form group fills width */
+.form-group {
+    width: 100%;
+}
+
+
+/* Footer */
+footer {
+    /*      */
+    color: #0d1034;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+}

@@ -1,0 +1,347 @@
+/* responcive */
+/* Apply background image to the entire home page */
+
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+
+/* Navigation Bar */
+nav {
+    text-align: center;
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Hero Section with Slider */
+/* New Slider Styles */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 500px; /* Set a max height */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: contain; /* Keep the entire image visible */
+}
+
+/* Navigation Buttons */
+.nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* about us*/
+
+.about-us {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4; /* Background color for visibility */
+}
+
+.about-us h2 {
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* product */
+
+.products {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.products h2 {
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between products */
+}
+
+.product {
+    background-color: #fff; /* White background for product cards */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px; /* Fixed width for product cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.product img {
+    width: 100%; /* Res.product img {
+        width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 4px;
+    }
+    
+    .product h3 {
+        margin: 15px 0;
+    }
+    
+    .product p {
+        margin-bottom: 15px;
+    }
+    
+    .buy-now {
+        background-color: #007bff; /* Button color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-decoration: none; /* Remove underline from link */
+        transition: background-color 0.3s;
+        margin-bottom: 10px; /* Space below the button */
+
+    }
+    
+    .buy-now:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+    
+
+
+/* .product button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #555;
+} */
+
+
+
+
+/* contact us */
+
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact input, 
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+/* video Section*/
+.video-slider {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 600px; /* Adjust as needed */
+}
+
+.video-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.prev-video, .next-video {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.prev-video { left: 0; }
+.next-video { right: 0; }
+
+.prev-video:hover, .next-video:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Media Queries */
+
+/* Phones (up to 600px) */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Tablets (601px to 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+}
+
+/* Desktops (993px and up) */
+@media (min-width: 993px) {
+    nav ul {
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    footer {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 400px; /* Limit maximum width */
+    }
+}
